@@ -1,5 +1,6 @@
 :root {
   --clr-primary-500: rgb(198, 190, 238);
+  --clr-primary-400: rgb(160, 145, 236);
   --clr-secondary-400: rgb(226, 221, 255);
   --clr-secondary-300: rgb(30, 21, 71);
   --clr-neutral-200: rgb(127, 119, 134);
@@ -42,6 +43,8 @@ body {
   margin-inline: auto;
 
   background: var(--clr-neutral-100);
+
+  border-radius: 1.5rem;
 }
 
 .navbar {
@@ -118,7 +121,7 @@ button:hover {
 }
 
 .content-top {
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 
 .content-top h1 {
@@ -131,10 +134,10 @@ button:hover {
   align-items: center;
   flex-wrap: wrap;
 
-  max-width: 30%;
+  max-width: 35%;
 
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   padding: 0.7rem;
 
   border-radius: 0.5rem;
@@ -183,3 +186,68 @@ button:hover {
   padding: 1rem 0.8rem;
 }
 
+.content-bottom {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas: 
+  'one two three three';
+}
+
+.col-1 {
+  grid-area: one;
+}
+
+.col-2 {
+  grid-area: two;
+}
+
+.col-3 {
+  grid-area: three;
+}
+
+.col-1 img,
+.col-2 img {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+.col-1 h3,
+.col-2 h3 {
+  font-size: var(--fs-200);
+
+  margin-bottom: 1rem;
+}
+
+.col-1 p,
+.col-2 p {
+  width: 50%;
+
+  font-size: var(--fs-100);
+
+  color: var(--clr-neutral-200);
+
+  margin-bottom: 1rem;
+}
+
+.col-1 a,
+.col-2 a {
+  font-size: var(--fs-200);
+  font-weight: var(--fw-700);
+
+  color: var(--clr-primary-400);
+
+  text-decoration: none;
+}
+
+.icon-shield,
+.icon-money {
+  min-height: 3rem;
+  max-width: 3rem;
+}
+
+.money-transfer {
+  display: block;
+
+  min-height: 100%;
+  max-width: 70%;
+}
