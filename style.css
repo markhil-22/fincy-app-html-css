@@ -12,7 +12,7 @@
   --fs-400: 3.5rem;
   --fs-300: 1.5rem;
   --fs-200: 1.1rem;
-  --fs-100: .8rem;
+  --fs-100: 0.8rem;
 }
 
 * {
@@ -42,7 +42,13 @@ body {
   padding: 3rem 4rem;
   margin-inline: auto;
 
-  background: var(--clr-neutral-100);
+  background: linear-gradient(
+    to top,
+    var(--clr-secondary-400) 0%,
+    var(--clr-secondary-400) 50%,
+    var(--clr-neutral-100) 50%,
+    var(--clr-neutral-100) 100%
+  );
 
   border-radius: 1.5rem;
 }
@@ -136,9 +142,10 @@ button:hover {
 
   max-width: 35%;
 
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 5rem;
   padding: 0.7rem;
+
+  background: var(--clr-neutral-100);
 
   border-radius: 0.5rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -174,7 +181,7 @@ button:hover {
   min-height: 2rem;
   max-width: 2rem;
 
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .btn-send {
@@ -189,8 +196,7 @@ button:hover {
 .content-bottom {
   display: grid;
   grid-auto-columns: 1fr;
-  grid-template-areas: 
-  'one two three three';
+  grid-template-areas: 'one two three three';
 }
 
 .col-1 {
@@ -250,4 +256,88 @@ button:hover {
 
   min-height: 100%;
   max-width: 70%;
+}
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  background: none;
+  border: none;
+  z-index: 10;
+  transition: all 0.25s;
+  display: none;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #000;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+@media (max-width: 950px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar .nav-right,
+  .navbar .nav-left ul li:nth-child(2){
+    display: none;
+  }
+
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .content-bottom {
+    grid-template-areas: 
+    'one two'
+    'three three';
+  }
+}
+
+@media (max-width: 650px) {
+  .content-bottom {
+    grid-template-areas: 
+    'two'
+    'one'
+    'three';
+  }
+
+  .content-top h1 {
+    font-size: 2.2rem;
+  }
+  
+  .send-amount {
+    max-width: 100%;
+  }
 }
