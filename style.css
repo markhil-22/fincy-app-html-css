@@ -66,14 +66,10 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:not(.logo-name):hover {
   color: var(--clr-primary-400);
 
   transition: .3s;
-}
-
-a.logo-name:hover {
-  color: #000;
 }
 
 li {
@@ -301,6 +297,47 @@ button:hover {
 .open .hamburger-bottom {
   transform: rotate(-45deg) translateY(6px) translateX(-6px);
 }
+
+.mobile-menu {
+  position: fixed;
+  top: 90px;
+  right: 0;
+  width: 90%;
+  height: 100%;
+  padding: 30px;
+
+  background-color: #fff;
+
+  color: #000;
+  
+  box-shadow: inset 0 4px 3px -3px rgb(0 0 0 / 10%),
+    inset 0 4px 2px -2px rgb(0 0 0 / 7%);
+  transition: all 0.3s;
+}
+
+.mobile-menu ul {
+  border-bottom: #777 solid 1px;
+
+  line-height: 3;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  font-size: var();
+}
+
+.mobile-menu a:hover {
+  color: var(--clr-secondary-400);
+}
+
+.hidden {
+  transform: translateX(100%);
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
 
 @media (max-width: 950px) {
   .hamburger {
