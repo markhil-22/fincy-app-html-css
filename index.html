@@ -41,6 +41,23 @@
 
       </div>
 
+      <div class="mobile-menu hidden" id="menu">
+        <ul>
+          <li>
+            <a href="#">Personal</a>
+          </li>
+          <li>
+            <a href="#">Download</a>
+          </li>
+          <li>
+            <a href="#">Plans</a>
+          </li>
+          <li>
+            <a href="#">Product</a>
+          </li>
+        </ul>
+      </div>
+
       <div class="content-top">
         <h1>
           Send money <br />
@@ -80,5 +97,18 @@
       </div>
       
     </div>
+
+    <script>
+      const btn = document.getElementById('menu-btn')
+      const nav = document.getElementById('menu')
+
+      function navToggle() {
+        btn.classList.toggle('open')
+        nav.classList.toggle('hidden')
+        document.body.classList.toggle('no-scroll')
+      }
+
+      btn.addEventListener('click', navToggle)
+    </script>
   </body>
 </html>
