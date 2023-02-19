@@ -14,9 +14,8 @@
     <title>Fincy App</title>
   </head>
   <body>
-    <div class="container">
-
-      <div class="navbar">
+    <main>
+      <nav class="navbar">
         <div class="nav-left">
           <img src="images/money-logo.png" class="logo-img" />
           <ul>
@@ -29,7 +28,7 @@
             <li><a href="#">Download</a></li>
             <li><a href="#">Plans</a></li>
             <li><a href="#">Product</a></li>
-            <button class="btn btn-login">Login</button>
+            <button class="button--primary button--md">Login</button>
           </ul>
         </div>
 
@@ -39,7 +38,7 @@
           <span class="hamburger-bottom"></span>
         </button>
 
-      </div>
+      </nav>
 
       <div class="mobile-menu hidden" id="menu">
         <ul>
@@ -58,45 +57,57 @@
         </ul>
       </div>
 
-      <div class="content-top">
-        <h1>
-          Send money <br />
-          abroad more faster
-        </h1>
-        <div class="send-amount">
-          <div class="amount">
-            <small>Amount</small>
-            <span>$1,000,000</span>
+      <div class="content_main">
+        <div class="content_inner content_container--left">
+          <div class="hero_header hero_inner">
+            <h1>
+              Send money <br />
+              abroad more faster
+            </h1>
           </div>
-          <div class="dollar-sign">
-            <img src="images/canada-icon.png" class="icon-cad" />
-            <span>CAD</span>
+          <div class="send-amount_container">
+            <div class="amount">
+              <small>Amount</small>
+              <span>$1,000,000</span>
+            </div>
+            <div class="dollar-sign">
+              <img src="images/canada-icon.png" class="icon-cad" />
+              <span>CAD</span>
+            </div>
+            <div>
+              <button class="button--primary button--lg">Send Now</button>
+            </div>
           </div>
+          <div class="features_container hero_inner">
+            <div class="feature_item">
+              <div class="feature_image">
+                <img src="images/shield.png" class="icon-shield" />
+              </div>
+              <div class="feature_details">
+                <h3>Safety guarantee</h3>
+                <p>We make sure your money will be safe 100% guarantee</p>
+                <a href="#">Read more</a>
+              </div>
+            </div>
+            <div class="feature_item">
+              <div class="feature_image">
+                <img src="images/money-icon.png" class="icon-money" />
+              </div>
+              <div class="feature_details">
+                <h3>Send money in minutes</h3>
+                <p>Your money will be sent faster than your blue wallet</p>
+                <a href="#">Send money now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content_inner content_container--right">
           <div>
-            <button class="btn btn-send">Send Now</button>
+            <img src="images/fincy-img.png" class="hero_img" />
           </div>
         </div>
       </div>
-
-      <div class="content-bottom">
-        <div class="col-1">
-          <img src="images/shield.png" class="icon-shield" />
-          <h3>Safety guarantee</h3>
-          <p>We make sure your money will be safe 100% guarantee</p>
-          <a href="#">Read more</a>
-        </div>
-        <div class="col-2">
-          <img src="images/money-icon.png" class="icon-money" />
-          <h3>Send money in minutes</h3>
-          <p>Your money will be sent faster than your blue wallet</p>
-          <a href="#">Send money now</a>
-        </div>
-        <div class="col-3">
-          <img src="images/transfer.png" class="money-transfer" />
-        </div>
-      </div>
-      
-    </div>
+    </main>
 
     <script>
       const btn = document.getElementById('menu-btn')
